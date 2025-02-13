@@ -5,7 +5,6 @@ import {
   Globe,
   GraduationCap,
   BookOpen,
-  CheckCircle,
   ArrowRight,
   Mail,
   Phone,
@@ -13,10 +12,16 @@ import {
   MapPin,
 } from "lucide-react";
 
-const CountryCard = ({ country, description, flag, imgUrl }) => (
+const CountryCard = ({ country, description, countryCode }) => (
   <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
     <div className="flex items-center gap-4 mb-4">
-      <div className="text-3xl">{flag}</div>
+      <div className="text-3xl">
+        <img
+          src={`https://flagcdn.com/w320/${countryCode.toLowerCase()}.png`}
+          alt={`${country} flag`}
+          className="w-10 h-8 border border-gray-200 "
+        />
+      </div>
       <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
         {country}
       </h3>
@@ -153,32 +158,32 @@ const LandingPage = () => {
             <CountryCard
               country="Russia"
               description="Top medical universities with modern infrastructure"
-              flag="🇷🇺"
+              countryCode="RU" // ISO code for Russia
             />
             <CountryCard
               country="Uzbekistan"
               description="Affordable education with quality standards"
-              flag="🇺🇿"
+              countryCode="UZ" // ISO code for Uzbekistan
             />
             <CountryCard
               country="Kazakhstan"
               description="Advanced medical programs with practical exposure"
-              flag="🇰🇿"
+              countryCode="KZ" // ISO code for Kazakhstan
             />
             <CountryCard
               country="Philippines"
               description="English-medium instruction with clinical training"
-              flag="🇵🇭"
+              countryCode="PH" // ISO code for Philippines
             />
             <CountryCard
               country="Georgia"
               description="European standard education at reasonable costs"
-              flag="🇬🇪"
+              countryCode="GE" // ISO code for Georgia
             />
             <CountryCard
               country="Kyrgyzstan"
               description="Well-established medical universities with modern facilities"
-              flag="🇰🇬"
+              countryCode="KG" // ISO code for Kyrgyzstan
             />
           </div>
         </div>
