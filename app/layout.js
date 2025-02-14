@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import FBPixels from "../components/FacebookPixels";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,6 +25,8 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <GoogleAnalytics gaId="G-C53V1HB22T" />
+        <FBPixels id="123456789" />
       </body>
     </html>
   );

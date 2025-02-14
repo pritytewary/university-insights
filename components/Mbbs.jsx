@@ -19,7 +19,7 @@ const CountryCard = ({ country, description, countryCode }) => (
         <img
           src={`https://flagcdn.com/w320/${countryCode.toLowerCase()}.png`}
           alt={`${country} flag`}
-          className="w-10 h-8 border border-gray-200 "
+          className="w-10 h-8 border border-gray-200"
         />
       </div>
       <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -158,32 +158,32 @@ const LandingPage = () => {
             <CountryCard
               country="Russia"
               description="Top medical universities with modern infrastructure"
-              countryCode="RU" // ISO code for Russia
+              countryCode="RU"
             />
             <CountryCard
               country="Uzbekistan"
               description="Affordable education with quality standards"
-              countryCode="UZ" // ISO code for Uzbekistan
+              countryCode="UZ"
             />
             <CountryCard
               country="Kazakhstan"
               description="Advanced medical programs with practical exposure"
-              countryCode="KZ" // ISO code for Kazakhstan
+              countryCode="KZ"
             />
             <CountryCard
               country="Philippines"
               description="English-medium instruction with clinical training"
-              countryCode="PH" // ISO code for Philippines
+              countryCode="PH"
             />
             <CountryCard
               country="Georgia"
               description="European standard education at reasonable costs"
-              countryCode="GE" // ISO code for Georgia
+              countryCode="GE"
             />
             <CountryCard
               country="Kyrgyzstan"
               description="Well-established medical universities with modern facilities"
-              countryCode="KG" // ISO code for Kyrgyzstan
+              countryCode="KG"
             />
           </div>
         </div>
